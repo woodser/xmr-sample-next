@@ -2,6 +2,16 @@ import moneroTs from "monero-ts";
 
 const myApp = async () => {
 
+    // connect to daemon rpc
+    console.log("Connecting to daemon RPC");
+    let daemonRpc = await moneroTs.connectToDaemonRpc({
+      uri: "http://localhost:28081",
+      username: "rpc_user",
+      password: "abc123",
+      rejectUnauthorized: false
+    });
+    console.log("Daemon RPC height: " + await daemonRpc.getHeight());
+
     // connect to wallet RPC
     console.log("Connecting to wallet RPC");
     let walletRpc = await moneroTs.connectToWalletRpc({
