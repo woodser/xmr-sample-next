@@ -24,13 +24,12 @@ const myApp = async () => {
     console.log("Wallet RPC seed: " + await walletRpc.getSeed());
 
     // create offline full wallet
-    // TODO: this causes error {"error":"Failed to parse URL from /Users/woodser/git/xmr-next-app/node_modules/monero-ts/dist/dist/monero_wallet_full.wasm"}
-    // let walletFull = await moneroTs.createWalletFull({
-    //   //path: "./test_wallets/" + GenUtils.getUUID(), // in-memory wallet if not given
-    //   password: "supersecretpassword123",
-    //   networkType: moneroTs.MoneroNetworkType.STAGENET,
-    // });
-    // console.log("Created full wallet with seed: " + await walletFull.getSeed());
+    let walletFull = await moneroTs.createWalletFull({
+      //path: GenUtils.getUUID(), // in-memory wallet if not given
+      password: "supersecretpassword123",
+      networkType: moneroTs.MoneroNetworkType.STAGENET,
+    });
+    console.log("Created full wallet with seed: " + await walletFull.getSeed());
 
     console.log("Done running XMR sample app");
     return true;
