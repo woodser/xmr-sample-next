@@ -1,4 +1,8 @@
-This project is a sample NextJS app using the monero-ts library.
+## Description
+
+This project is a sample NextJS app using the [monero-ts](https://github.com/woodser/monero-ts) library.
+
+## How to Run in a Browser
 
 1. `git clone https://github.com/woodser/xmr-next-app.git`
 2. `cd xmr-next-app`
