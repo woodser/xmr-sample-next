@@ -1,6 +1,10 @@
 import assert from 'assert';
 import moneroTs from "monero-ts";
 
+if (moneroTs.GenUtils.isBrowser()) {
+  moneroTs.LibraryUtils.setWorkerLoader(() => new Worker(new URL("monero-ts/dist/monero.worker.js", import.meta.url)));
+}
+
 const myApp = async () => {
 
     // connect to a daemon
