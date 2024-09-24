@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "standalone", // TODO: debug this further
+  output: "standalone",
   webpack: (config, { isServer }) => {
     config.experiments = { ...config.experiments, topLevelAwait: true }
 
