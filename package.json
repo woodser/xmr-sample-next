@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "PORT=8080 next dev",
     "build": "next build",
+    "debug:standalone": "next build && cp -rf public .next/standalone/ && cp -rf .next/static .next/standalone/.next/static && cp -rf node_modules/web-worker/cjs/browser.js .next/standalone/node_modules/web-worker/cjs/ && PORT=8080 node .next/standalone/server.js",
     "start": "next start",
     "lint": "next lint"
   },

@@ -1,8 +1,7 @@
 "use client";
 
-import myApp from "@/pages/api/MyApp";
+import myApp from "@/MyApp";
 import { useEffect, useState } from "react";
-
 
 export default function Home() {
   const [logs, setLogs] = useState<string[]>([]);
@@ -24,6 +23,10 @@ export default function Home() {
 
     runApp();
   }, [logsInstalled]);
+
+  useEffect(() => {
+    fetch("/api/xmr-sample");
+  }, []);
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
