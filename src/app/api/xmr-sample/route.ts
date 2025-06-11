@@ -5,6 +5,7 @@ export const dynamic = "force-dynamic";
 
 export async function GET(request: NextRequest): Promise<NextResponse> {
   try {
+    console.log("Running XMR sample app from route.ts");
     let result = await myApp();
     return NextResponse.json({ result }, { status: 200 });
   } catch (error) {

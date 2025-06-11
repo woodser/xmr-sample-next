@@ -17,6 +17,7 @@ export default function Home() {
   useEffect(() => {
     const runApp = async () => {
       if (logsInstalled) {
+        console.log("Running XMR sample app from page.tsx");
         await myApp();
       }
     };
@@ -25,7 +26,7 @@ export default function Home() {
   }, [logsInstalled]);
 
   useEffect(() => {
-    fetch("/api/xmr-sample");
+    //fetch("/api/xmr-sample");
   }, []);
 
   return (
