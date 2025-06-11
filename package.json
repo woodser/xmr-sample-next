@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "memfs": "^4.11.2",
-    "monero-ts": "^0.11.1",
+    "monero-ts": "^0.11.3",
     "next": "^14.2.11",
     "react": "^18",
     "react-dom": "^18"
