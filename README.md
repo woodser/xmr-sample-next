@@ -6,7 +6,7 @@ This project is a sample NextJS app using the [monero-ts](https://github.com/woo
 
 1. `git clone https://github.com/woodser/xmr-sample-next.git`
 2. `cd xmr-sample-next`
-3. `npm install`
+3. `rm -rf .next && npm install`
 4. `npm run dev`
 
 ### Client-side demo
